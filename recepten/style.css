@@ -1,0 +1,90 @@
+:root{
+    --orange: #9c3f22;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    min-height: 100vh;
+    background: #ffcd9f;
+    color: #24321f;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 4rem 2rem;
+}
+
+.recipe{
+    width: 80rem;
+    margin: 0 auto;
+    background: #fffdf7;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem #24321f26;
+}
+
+.recipe__title,
+.recipe__heading{
+    color: var(--orange);
+}
+
+.recipe__title{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.recipe__heading{
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.recipe__header{
+    margin-bottom: 3rem;
+}
+
+.recipe__figure{
+    margin: 0 0 3rem;
+}
+
+.recipe__image{
+    width: 100%;
+    max-height: 36rem;
+    object-fit: cover;
+    border-radius: .7rem;
+}
+
+.recipe__caption{
+    margin-top: .6rem;
+    color: #5f6b58;
+    font-size: 1.2rem;
+}
+
+.recipe__content{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+}
+
+.recipe__list{
+    padding-left: 3rem;
+}
+
+.recipe__list > li{
+    margin-bottom: 1rem;
+}
+
+.recipe__footer{
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: .1rem solid #d8e2d0;
+}
+
+.recipe__footer > a{
+    color: url(--orange);
+}

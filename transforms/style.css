@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.kabouter{
+    transform: scale(0.5);
+}
+
+.draak{
+    transform: scale(1.7);
+}
+
+.dronken{
+    transform: rotate(45deg);
+}

@@ -1,0 +1,83 @@
+/* Stylen van de blokken en centrereren */
+
+body {
+  font-family: sans-serif;
+  background: yellow;
+}
+
+main {
+  margin: 0 auto;
+  width: 50vw;
+}
+
+article {
+  background: white;
+  padding: 2em;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+p {
+  font-size: 4em;
+  text-align: center;
+}
+
+strong {
+  font-family: monospace;
+}
+
+/* 👇 Schrijf hieronder je eigen CSS
+
+/* 1. Fade-in (intro). Gebruik property 'opacity' */
+
+.fade {
+  animation: verschijn 3s ease;
+}
+.turn {
+  animation: draaien 1s linear infinite;
+}
+.scale:hover {
+  animation: scalen 3s ease-in-out infinite;
+}
+
+@keyframes verschijn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* 2. Draaien (loopend) */
+
+@keyframes draaien {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 3. Scalen (op :hover) */
+
+@keyframes scalen {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+    background: black;
+    background-image:url(../img/LupinHero.jpeg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 550px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px 0 25px;
+    list-style: none;
+}
+
+li img {
+    width: 400px;
+}

@@ -1,0 +1,87 @@
+/* Standaard styling van de pagina */
+
+body {
+  font-family: sans-serif;
+  background: yellow;
+  margin: 2em;
+}
+
+main {
+  margin: 0 auto;
+  width: 50vw;
+}
+
+article {
+  background: white;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+article h2 {
+  background: black;
+  color: white;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+strong {
+  font-family: monospace;
+}
+
+img {
+    max-width: 100%;
+    
+}
+
+li {
+  display:inline;
+  max-width: 10%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5em;
+  display:flex;
+}
+
+.midden {
+  height: 40vh;
+}
+  
+
+/* 👇 Schrijf hieronder je eigen CSS
+
+/* Iconen aan de linkerkant */
+.linkerkant {
+  justify-content: flex-start;
+}
+
+
+/* Iconen aan de rechterkant */
+.rechterkant {
+  justify-content: flex-end;
+}
+
+
+/* Iconen in het midden (centreren) */
+.centreren {
+  justify-content: center;
+}
+
+
+/* Iconen verspreiden (evenveel ruimte) */
+.verspreiden {
+  justify-content: space-evenly;
+}
+
+
+/* Iconen centreren (midden midden) */
+.midden {
+  justify-content: center;
+  align-items: center;
+}
+
+.margin li:last-child {
+  margin-left: auto;
+}

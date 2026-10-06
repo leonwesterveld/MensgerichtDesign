@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: helvetica, arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.link-button {
+    margin: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid darkgreen;
+    border-radius: 0.5rem;
+    background: honeydew;
+    color: darkgreen;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 250ms ease;
+}
+
+.link-button:hover {
+    background: darkgreen;
+    color: #fff;
+}
+
+.link-button:focus-visible {
+    border-width: 5px;
+    outline: 3px solid #d08032;
+    outline-offset: 4px;
+}
+
+.link-button:active {
+    font-weight: bold;
+}

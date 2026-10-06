@@ -1,0 +1,128 @@
+/* Zet de vlakken naast elkaar en geeft ze een border */
+
+body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr)
+}
+
+div {
+  border: 1px solid black;
+  height: 100vh;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* 👇 Vul steeds de background property in */
+
+div:nth-child(1) {
+  background: linear-gradient(to right, red, orange);
+  animation-name: kleuren-1;
+}
+
+div:nth-child(2) {
+  background: linear-gradient(to right, #ffa500, #ffff00);
+  animation-name: kleuren-2;
+}
+
+div:nth-child(3) {
+  background: linear-gradient(to right, hsl(60, 100%, 50%), hsl(120, 100%, 50%));
+  animation-name: kleuren-3;
+}
+
+div:nth-child(4) {
+  background: linear-gradient(to right, rgb(0, 255, 0), rgb(0, 255, 255));
+  animation-name: kleuren-4;
+}
+
+div:nth-child(5) {
+  background: linear-gradient(to right, aqua, blue);
+  animation-name: kleuren-5;
+}
+
+div:nth-child(6) {
+  background: linear-gradient(to right, blue, indigo);
+  animation-name: kleuren-6;
+}
+
+div:nth-child(7) {
+  background: linear-gradient(to right, indigo, violet);
+  animation-name: kleuren-7;
+} 
+
+@keyframes kleuren-1 {
+  0%, 100% { background: linear-gradient(to right, red, orange); }
+  12.5% { background: linear-gradient(to right, orange, yellow); }
+  25% { background: linear-gradient(to right, yellow, lime); }
+  37.5% { background: linear-gradient(to right, lime, aqua); }
+  50% { background: linear-gradient(to right, aqua, blue); }
+  62.5% { background: linear-gradient(to right, blue, indigo); }
+  75% { background: linear-gradient(to right, indigo, violet); }
+  87.5% { background: linear-gradient(to right, violet, red); }
+}
+
+@keyframes kleuren-2 {
+  0%, 100% { background: linear-gradient(to right, orange, yellow); }
+  12.5% { background: linear-gradient(to right, yellow, lime); }
+  25% { background: linear-gradient(to right, lime, aqua); }
+  37.5% { background: linear-gradient(to right, aqua, blue); }
+  50% { background: linear-gradient(to right, blue, indigo); }
+  62.5% { background: linear-gradient(to right, indigo, violet); }
+  75% { background: linear-gradient(to right, violet, red); }
+  87.5% { background: linear-gradient(to right, red, orange); }
+}
+
+@keyframes kleuren-3 {
+  0%, 100% { background: linear-gradient(to right, yellow, lime); }
+  12.5% { background: linear-gradient(to right, lime, aqua); }
+  25% { background: linear-gradient(to right, aqua, blue); }
+  37.5% { background: linear-gradient(to right, blue, indigo); }
+  50% { background: linear-gradient(to right, indigo, violet); }
+  62.5% { background: linear-gradient(to right, violet, red); }
+  75% { background: linear-gradient(to right, red, orange); }
+  87.5% { background: linear-gradient(to right, orange, yellow); }
+}
+
+@keyframes kleuren-4 {
+  0%, 100% { background: linear-gradient(to right, lime, aqua); }
+  12.5% { background: linear-gradient(to right, aqua, blue); }
+  25% { background: linear-gradient(to right, blue, indigo); }
+  37.5% { background: linear-gradient(to right, indigo, violet); }
+  50% { background: linear-gradient(to right, violet, red); }
+  62.5% { background: linear-gradient(to right, red, orange); }
+  75% { background: linear-gradient(to right, orange, yellow); }
+  87.5% { background: linear-gradient(to right, yellow, lime); }
+}
+
+@keyframes kleuren-5 {
+  0%, 100% { background: linear-gradient(to right, aqua, blue); }
+  12.5% { background: linear-gradient(to right, blue, indigo); }
+  25% { background: linear-gradient(to right, indigo, violet); }
+  37.5% { background: linear-gradient(to right, violet, red); }
+  50% { background: linear-gradient(to right, red, orange); }
+  62.5% { background: linear-gradient(to right, orange, yellow); }
+  75% { background: linear-gradient(to right, yellow, lime); }
+  87.5% { background: linear-gradient(to right, lime, aqua); }
+}
+
+@keyframes kleuren-6 {
+  0%, 100% { background: linear-gradient(to right, blue, indigo); }
+  12.5% { background: linear-gradient(to right, indigo, violet); }
+  25% { background: linear-gradient(to right, violet, red); }
+  37.5% { background: linear-gradient(to right, red, orange); }
+  50% { background: linear-gradient(to right, orange, yellow); }
+  62.5% { background: linear-gradient(to right, yellow, lime); }
+  75% { background: linear-gradient(to right, lime, aqua); }
+  87.5% { background: linear-gradient(to right, aqua, blue); }
+}
+
+@keyframes kleuren-7 {
+  0%, 100% { background: linear-gradient(to right, indigo, violet); }
+  12.5% { background: linear-gradient(to right, violet, red); }
+  25% { background: linear-gradient(to right, red, orange); }
+  37.5% { background: linear-gradient(to right, orange, yellow); }
+  50% { background: linear-gradient(to right, yellow, lime); }
+  62.5% { background: linear-gradient(to right, lime, aqua); }
+  75% { background: linear-gradient(to right, aqua, blue); }
+  87.5% { background: linear-gradient(to right, blue, indigo); }
+}
