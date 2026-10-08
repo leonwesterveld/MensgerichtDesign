@@ -1,0 +1,117 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                radial-gradient(circle at top, #172554, #020617 65%);
+
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            padding: 40px;
+
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 24px;
+
+            backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(37, 99, 235, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+
+            font-size: 32px;
+
+            background: linear-gradient(90deg, #60a5fa, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .projects {
+            display: grid;
+            gap: 14px;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 17px 20px;
+
+            color: white;
+            text-decoration: none;
+
+            background: linear-gradient(
+                135deg,
+                rgba(37, 99, 235, 0.25),
+                rgba(14, 165, 233, 0.12)
+            );
+
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 14px;
+
+            transition: 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+
+            background: linear-gradient(
+                135deg,
+                rgba(37, 99, 235, 0.45),
+                rgba(14, 165, 233, 0.25)
+            );
+
+            border-color: rgba(96, 165, 250, 0.7);
+
+            box-shadow:
+                0 8px 25px rgba(37, 99, 235, 0.2);
+        }
+
+        .project-name {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .arrow {
+            color: #60a5fa;
+            font-size: 20px;
+
+            transition: 0.2s ease;
+        }
+
+        .project:hover .arrow {
+            transform: translateX(4px);
+        }
+
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+        }
