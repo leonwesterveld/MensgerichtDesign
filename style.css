@@ -12,8 +12,7 @@
             justify-content: center;
             align-items: center;
 
-            background:
-                radial-gradient(circle at top, #172554, #020617 65%);
+            background: wheat;
 
             color: white;
         }
