@@ -278,6 +278,7 @@ body {
     padding: 1.5rem 2rem 1rem;
     cursor: pointer;
     transition: background 0.2s ease;
+    text-decoration: none;
 }
 
 .bronnen__section:hover {
@@ -306,5 +307,4 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin: 0;
-    text-decoration: none;
 }
