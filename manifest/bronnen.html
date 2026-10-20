@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Manifest</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <figure class="site-header__figure">
+            <img class="site-header__image" src="images/clapperboard-png-30949.png" alt="ClapperBoard">
+        </figure>
+        <nav class="site-header__nav" aria-label="Hoofdnavigatie">
+            <ul class="site-nav">
+                <li class="site-nav__item"><a class="site-nav__link" href="index.html">Manifest</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="wiki.html">Wiki</a></li>
+                <li class="site-nav__item site-nav__item--active"><a class="site-nav__link"
+                        href="bronnen.html">Bronnen</a></li>
+            </ul>
+        </nav>
+        <section class="site-header__title">
+            <h1 class="site-header__titleText">Bronnen</h1>
+        </section>
+    </header>
+
+    <main class="bronnen">
+        <section class="bronnen__section" tabindex="0" role="link" data-url="">
+            <figure class="bronnen__figure"><img class="bronnen__image" src="" alt="image 1"></figure>
+            <p class="bronnen__link">link to site</p>
+        </section>
+        <section class="bronnen__section" tabindex="0" role="link" data-url="">
+            <p class="bronnen__link">link to site</p>
+            <figure class="bronnen__figure"><img class="bronnen__image" src="" alt="image 2"></figure>
+        </section>
+        <section class="bronnen__section" tabindex="0" role="link" data-url="">
+            <figure class="bronnen__figure"><img class="bronnen__image" src="" alt="image 3"></figure>
+            <p class="bronnen__link">link to site</p>
+        </section>
+        <section class="bronnen__section" tabindex="0" role="link" data-url="">
+            <p class="bronnen__link">link to site</p>
+            <figure class="bronnen__figure"><img class="bronnen__image" src="" alt="image 4"></figure>
+        </section>
+        <section class="bronnen__section" tabindex="0" role="link" data-url="">
+            <figure class="bronnen__figure"><img class="bronnen__image" src="" alt="image 5"></figure>
+            <p class="bronnen__link">link to site</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="site-footer__text">gemaakt door Leon Westerveld</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.bronnen__section').forEach((section) => {
+            section.addEventListener('click', () => {
+                const url = section.dataset.url;
+                if (url) window.location.href = url;
+            });
+
+            section.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    section.click();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
