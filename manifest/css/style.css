@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Comic+Relief:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Paytone+One&family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+
+:root {
+    --yellow: #fcef3a;
+    --background: white;
+    --accent: black;
+    --text: #171717;
+    --text-reverse: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    font-family: "Bungee", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Fraunces", serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Fraunces", serif;
+    background: var(--background);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header ----------------------------------------------------------------------------------------------------*/
+
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+    height: 100vh;
+}
+
+.header__figure {
+    background: var(--yellow);
+    padding: 4rem;
+    overflow: hidden;
+}
+
+.header__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(-10deg);
+    padding: 6rem 10rem 4rem 10rem;
+}
+
+.header__nav {
+    padding: 9rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 6rem;
+    height: 100%;
+}
+
+.nav__item {
+    position: relative;
+    width: 30rem;
+    list-style: none;
+    isolation: isolate;
+    border: 3px solid var(--accent);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav__item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 3px solid var(--accent);
+    transform: rotate(-7deg);
+    z-index: -1;
+    pointer-events: none;
+    transition: transform 0.4s ease;
+}
+
+.nav__item:hover::before {
+    transform: rotate(0deg);
+}
+
+.nav__link {
+    display: block;
+    padding: 2rem;
+    background: var(--yellow);
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav__item--active {
+    background: #FF3A3A;
+}
+
+.nav__item--active .nav__link {
+    background: #FF3A3A;
+    color: white;
+}
+
+.header__title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--background);
+    height: 20rem;
+    width: 65vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__titleText {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #444;
+}
+
+/* Footer ----------------------------------------------------------------------------------------------------*/
+
+.footer {
+    height: 15rem;
+    background: var(--yellow);
+    color: var(--text-reverse);
+    border-radius: 2.5rem 2.5rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__text {
+    font-size: 5rem;
+    font-weight: 800;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* Manifest --------------------------------------------------------------------------------------------------*/
+
+.manifest__text {
+    width: 60ch;
+    font-size: 1.6rem;
+}
+
+.manifest__block {
+    padding: 10rem;
+}
+
+.manifest__block h2 {
+    color: var(--yellow);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    letter-spacing: 0.05rem;
+    font-size: 5rem;
+    font-weight: 900;
+    border-bottom: 5rem;
+}
+
+.manifest__block--1 {
+    border-bottom: var(--accent) solid 3px;
+    position: relative;
+}
+
+.manifest__block--1>.manifest__text:first-of-type {
+    margin-left: auto;
+    margin-bottom: 10rem;
+}
+
+.manifest__clip--summary {
+    position: absolute;
+    right: 10rem;
+    bottom: -10rem;
+    width: 40rem;
+    border: 2px solid var(--accent);
+    background: var(--yellow);
+    box-shadow: 0.8rem 0.8rem 0 var(--accent);
+    display: block;
+    padding: 1.5rem;
+    font-family: "Playwrite NZ Basic", cursive;
+}
+
+.manifest__clip--warning,
+.manifest__clip--prompt {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.manifest__clip--warning {
+    margin-bottom: 1rem;
+}
+
+.manifest__clip--prompt {
+    margin-top: 1rem;
+}
+
+.manifest__clip--screen {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 18rem;
+    border: 2px solid var(--accent);
+    background: linear-gradient(135deg, #555, #171717 55%, #8b1c1c);
+    cursor: pointer;
+}
+
+.manifest__clip--play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 4rem;
+}
+
+.manifest__clip--spoiler {
+    position: absolute;
+    display: none;
+    place-items: center;
+    padding: 2rem;
+    background: black;
+    color: var(--text-reverse);
+    font-size: 1.8rem;
+    height: 100%;
+    width: 100%;
+    cursor: default;
+    transition: opacity 0.25s ease;
+}
+
+.manifest__clip--spoilerLink {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--yellow);
+    background: var(--yellow);
+    color: var(--text);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.manifest__clip--spoilerLink:hover {
+    background: #ff3a3a;
+    color: white;
+}
+
+.manifest__clip--spoilerLink:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+.manifest__clip[open] .manifest__clip--spoiler {
+    display: grid;
+    z-index: 100;
+}
+
+.manifest__clip--caption {
+    padding: 0 1.5rem 1.5rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.manifest__block--3 {
+    background: linear-gradient(to right, transparent 30%, var(--yellow) 30%);
+    color: var(--text);
+    padding: 5rem 10rem;
+    display: flex;
+    gap: 7rem;
+}
+
+.manifest__block--3>.manifest__textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.manifest__block--3 h2 {
+    color: var(--text-reverse);
+}
+
+.manifest__chart {
+    width: 100%;
+    padding: 2rem;
+    background: var(--background);
+    color: var(--text);
+    box-shadow: 0.8rem 0.8rem var(--accent);
+    font-family: "Comic Relief", cursive;
+    border: 2px solid var(--accent);
+}
+
+.manifest__chart-title {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.manifest__chart-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.manifest__chart-listItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+.manifest__chart-meter {
+    width: 70%;
+    accent-color: var(--yellow);
+}
+
+.manifest__chart-note {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.manifest__block--5 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding: 0;
+}
+
+.manifest__block--5 h2 {
+    background: var(--yellow);
+    color: var(--text-reverse);
+    padding: 5rem 5rem 5rem 10rem;
+    font-size: 7rem;
+}
+
+.manifest__block--5>.manifest__text {
+    padding: 5rem 7rem 5rem 7rem;
+}
+
+.manifest__block--6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Wiki ------------------------------------------------------------------------------------------------------*/
+
+.wiki__block {
+    padding: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+.wiki__text {
+    width: 60ch;
+    font-size: 1.8rem;
+}
+
+.wiki__block--1 .wiki__text {
+    transform: rotate(-3deg);
+}
+
+.wiki__block--2 {
+    color: var(--text);
+    background: var(--yellow);
+    clip-path: polygon(0 0, 100% 18%, 100% 100%, 0 82%);
+
+}
+
+.wiki__block--2 .wiki__text {
+    transform: rotate(3deg);
+}
+
+.wiki__block--3 {
+    display: flex;
+    gap: 3rem;
+    padding: 5rem;
+    width: 100rem;
+    margin: 0 auto;
+}
+
+.wiki__figure {
+    flex: 1;
+    max-width: 30rem;
+    height: 50rem;
+    border: 2px solid var(--accent);
+    box-shadow: 0.8rem 0.8rem 0 var(--accent);
+    background: var(--background);
+    padding: .5rem;
+
+}
+
+.wiki__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Bronnen ---------------------------------------------------------------------------------------------------*/
+
+.bronnen {
+    padding: 5rem 10rem;
+    display: grid;
+    gap: 3rem;
+}
+
+.bronnen__section {
+    display: flex;
+    align-items: end;
+    gap: 5rem;
+    border-bottom: var(--accent) 3px solid;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-decoration: none;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.bronnen__section:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.bronnen__section:nth-child(even) {
+    justify-content: end;
+}
+
+.bronnen__figure {
+    position: relative;
+    height: 25rem;
+    width: 40rem;
+    overflow: hidden;
+    border: 2px solid var(--accent);
+    box-shadow: 0.8rem 0.8rem 0 var(--accent);
+    background: var(--background);
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.bronnen__figure:hover{
+    box-shadow: none;
+    transform: translate(0.8rem, 0.8rem);
+}
+
+.bronnen__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bronnen__figure::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 30%);
+}
+
+.bronnen__link {
+    color: var(--text);
+    font-size: 3rem;
+    font-family: "Paytone One", sans-serif;
+}
+
+.bronnen__info {
+    padding-bottom: 3rem;
+}
+
+.bronnen__description {
+    max-width: 40ch;
+    font-family: "Comic Relief", cursive;
+    color: var(--text);
+    font-size: 1.2rem;
+}
